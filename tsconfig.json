@@ -11,6 +11,9 @@
     "declaration": false,
     "declarationMap": false,
 
+    // glint bug: fails to compile templates that import no components under --isolatedModules
+    "isolatedModules": true,
+
     "paths": {
       "glint-459/tests/*": ["tests/*"],
       "glint-459/*": ["app/*"],
