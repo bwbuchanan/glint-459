@@ -1,0 +1,27 @@
+{
+  "extends": "@tsconfig/ember/tsconfig.json",
+  "compilerOptions": {
+    // The combination of `baseUrl` with `paths` allows Ember's classic package
+    // layout, which is not resolvable with the Node resolution algorithm, to
+    // work with TypeScript.
+    "baseUrl": ".",
+    "lib": ["ES2020"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "declaration": false,
+    "declarationMap": false,
+
+    "paths": {
+      "glint-459/tests/*": ["tests/*"],
+      "glint-459/*": ["app/*"],
+      "*": ["types/*"]
+    }
+  },
+  "include": ["app/**/*", "tests/**/*", "types/**/*"],
+  "glint": {
+    "environment": "ember-loose",
+    "transform": {
+      "include": ["app/components/**", "app/templates/**"]
+    }
+  }
+}
